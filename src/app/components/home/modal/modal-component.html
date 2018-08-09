@@ -1,0 +1,28 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add Urls</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <p>Url:</p><input placeholder="add url" [(ngModel)]="urll" name="something" >
+        <br>
+        <p>Url name:</p><input placeholder="Url name" [(ngModel)]="urlname" name="something">
+        <br>
+        <p>Url description:</p><input placeholder="Description" style="min-height: 100px" [(ngModel)]="urldescription" name="something">
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="callParent()">Save</button>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">ADD Urls</button>
+
+<hr>
+
+<pre>{{closeResult}}</pre>

@@ -50,14 +50,10 @@ button{
 }
 
 /* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
+
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+
 
 img {
   -webkit-filter: blur(5px);
@@ -79,7 +75,7 @@ body,html{
   height: 100%;
 
   /* Set up positioning */
-  position: fixed;
+
   top: 0;
   left: 0;
   -webkit-filter: blur(5px);
