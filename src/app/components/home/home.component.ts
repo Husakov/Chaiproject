@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import {UrlService} from '../../services/url.service';
+
 
 
 @Component({
@@ -8,21 +8,13 @@ import {UrlService} from '../../services/url.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  url="";
-  name="";
-  des="";
-  constructor(private urlservice:UrlService){
-  }
 
+  constructor(){
+
+  }
   ngOnInit() {
+
   }
-
-
-public addUrls(){
-    this.urlservice.addUrls(this.url,this.name,this.des);
-    console.log("samir")
-
-}
 
 
 }

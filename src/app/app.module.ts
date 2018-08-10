@@ -9,13 +9,17 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ModalComponent} from './components/home/modal/modal.component';
 import {UrlService} from './services/url.service';
+import { ItemListComponent } from './components/item-list/item-list.component';
+import {FilterPipe} from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     BrokenUrlsComponent,
-    ModalComponent
+    ModalComponent,
+    ItemListComponent,
+    FilterPipe
   ],
   imports: [
     FormsModule,
@@ -23,7 +27,7 @@ import {UrlService} from './services/url.service';
     BrowserModule,
     NgbModule.forRoot()
   ],
-  providers: [ UrlService],
+  providers: [ UrlService,ItemListComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

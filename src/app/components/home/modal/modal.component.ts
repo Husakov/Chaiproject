@@ -1,7 +1,7 @@
-import {Component,Input,Output,EventEmitter} from '@angular/core';
+import {Component} from '@angular/core';
 
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-import {HomeComponent} from '../home.component';
+import {UrlService} from '../../../services/url.service';
 
 @Component({
   selector: 'modalComponent',
@@ -13,10 +13,12 @@ export class ModalComponent {
   urldescription:string;
   closeResult: string;
 
-  constructor(private modalService: NgbModal) {
+  constructor(private modalService: NgbModal,private urlServices:UrlService) {
+    this.urll="fsdg";
+    this.urlname="gds";
+    this.urldescription="gds";
 
   }
-
 
 
   open(content) {
@@ -27,10 +29,13 @@ export class ModalComponent {
     });
   }
 
-  callAdd() {
+  AddUrls(){
 
+    this.urlServices.addUrls(this.urll,this.urlname,this.urldescription);
+
+
+    console.log("Samir");
   }
-
 
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
