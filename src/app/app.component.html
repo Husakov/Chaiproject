@@ -2,18 +2,23 @@
 <head>
 
 </head>
+<div class="pozicija">
+  <mat-button-toggle-group #group="matButtonToggleGroup">
+    <mat-button-toggle value="left" routerLink="/" > URLs list</mat-button-toggle>
+    <mat-button-toggle value="right" routerLink="/brokenurls">Broken URls</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
 <body class="margina">
 <div class="bgimage">
 <div class="bodi"></div>
   <div class="content">
-<div class="navbar" style="margin-left: 40%; margin-right: 40%">
-  <a routerLink="">Home</a>
-  <a routerLink="/brokenurls">Broken Urls</a>
-</div>
+
+    <div class="bozi">
 
 
 <router-outlet></router-outlet>
   </div>
+</div>
 </div>
 </body>
 </html>

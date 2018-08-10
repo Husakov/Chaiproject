@@ -12,8 +12,7 @@ export class BrokenUrlsComponent implements OnInit {
 
   ngOnInit() {
   }
-  urlss=[];
-  urls=JSON.parse(localStorage.getItem("urls"));
+
 
 
 

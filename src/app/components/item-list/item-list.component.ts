@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
 import 'moment/locale/pt-br';
-import {forEach} from '@angular/router/src/utils/collection';
+import {UrlService} from '../../services/url.service';
 
 
 @Component({
@@ -14,9 +14,26 @@ sortterm="";
   constructor() { }
 
   ngOnInit() {
+    if(JSON.parse(localStorage.getItem("urls"))!=null){
+      this.urls=JSON.parse(localStorage.getItem("urls"));
+      this.urlss=this.urls.urls;
+    }else{
+      this.urlss=[
+        {name:"URL",url:"Name",description:"Description",time:"date/time"},
+      ];
+
+    }
   }
   urls=JSON.parse(localStorage.getItem("urls"));
-  urlss=this.urls.urls;
+  urlss=[];
+
+
+remove(i){
+console.log(this.urlss)
+this.urlss.splice(i,1);
+console.log(this.urlss);
+  localStorage.setItem('urls',JSON.stringify({urls:this.urlss}));
+}
 
 exist() {
 this.urlss.forEach((url,index)=>{

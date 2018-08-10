@@ -1,12 +1,14 @@
 <h1>YOUR FAVOURITE URLS:</h1>
 <input [(ngModel)]=sortterm placeholder="search" style="margin-bottom: 10px; margin-left: 37%">
-<div class="list-group" *ngFor="let item of urlss | filter:sortterm ">
+<div class="list-group" *ngFor="let item of urlss | filter:sortterm ;let i=index ">
+
 <a href="https://{{item.url}}" class="list-group-item list-group-item-action flex-column align-items-start " (click)="exist()">
   <div class="d-flex w-100 justify-content-between">
     <h5 class="mb-1">Name: {{item.name}}</h5>
-    <small>3 days ago</small>
+    <small>{{item.time}}</small>
   </div>
   <p class="mb-1">Description: {{item.description}}</p>
-  <small>URL: {{item.url}}</small>
+  <small>click on field to navigate on URL: {{item.url}}</small>
 </a>
+  <small  style="position: center;margin-bottom: 10px"><button class="btn bg-primary remove" onClick="location.href=location.href" (click)="remove(i)">remove Url</button></small>
 </div>

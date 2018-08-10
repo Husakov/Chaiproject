@@ -11,6 +11,9 @@ import {ModalComponent} from './components/home/modal/modal.component';
 import {UrlService} from './services/url.service';
 import { ItemListComponent } from './components/item-list/item-list.component';
 import {FilterPipe} from './pipes/search.pipe';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatTableModule} from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,13 @@ import {FilterPipe} from './pipes/search.pipe';
     FormsModule,
     AppRoutingModule,
     BrowserModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    MatButtonToggleModule,
+  ],
+  exports:[
+    MatButtonToggleModule,
+    MatTableModule,
+
   ],
   providers: [ UrlService,ItemListComponent],
   bootstrap: [AppComponent]

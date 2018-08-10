@@ -14,9 +14,9 @@ export class ModalComponent {
   closeResult: string;
 
   constructor(private modalService: NgbModal,private urlServices:UrlService) {
-    this.urll="fsdg";
-    this.urlname="gds";
-    this.urldescription="gds";
+    this.urll="name";
+    this.urlname="url";
+    this.urldescription="description";
 
   }
 

@@ -40,6 +40,7 @@ img {
 }
 body,html{
   height: 100%;
+  margin-top: px;
 }
 .bodi{
 
@@ -62,4 +63,18 @@ body,html{
   margin-left: 50px;
   margin-right: 50px;
 }
+.pozicija{
+  margin-left: 500px;
+  position:fixed;
+}
+mat-button-toggle{
+  height:50px !important;
+  width: 200px;
+  text-align: center;
+  border-right: black !important;
+}
+mat-button-toggle:hover{
+  background-color: dimgrey;
+  color: white;
 
+}
